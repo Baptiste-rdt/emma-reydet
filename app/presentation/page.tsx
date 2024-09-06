@@ -1,5 +1,5 @@
 import PageSeparator from "@/components/page-separator/PageSeparator";
-import { Separator } from "@radix-ui/react-separator";
+import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 
 export default function Page() {
