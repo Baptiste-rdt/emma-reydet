@@ -77,12 +77,12 @@ export default function Home() {
           <CarouselContent>
             {loading ? 
             Array(4).fill("empty").map((_,i)=>(
-              <CarouselItem className="basis-1/4 pl-2">
+              <CarouselItem className="basis-1/4 pl-2" key={i}>
                 <Skeleton className="w-[250px] h-[350px]"/>
               </CarouselItem>
             )) :
-            creations?.map((creation) => (
-              <CarouselItem className="basis-1/4 pl-2">
+            creations?.map((creation, index) => (
+              <CarouselItem className="basis-1/4 pl-2" key={index}>
                 <div className="flex flex-col aspect-auto items-center justify-between bg-neutral-200 border border-neutral-300" onClick={() => window.location.href = `/creations/${creation.url}`}>
                   <Image
                     src={`/ressources/${creation.image}`}

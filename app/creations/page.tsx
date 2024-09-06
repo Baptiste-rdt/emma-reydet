@@ -49,10 +49,10 @@ export default function Page() {
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 p-4 max-w-[80vw]">
                 {loading ?
                     Array(4).fill("empty").map((_, i) => (
-                            <Skeleton className="w-[250px] h-[350px]" />
+                            <Skeleton className="w-[250px] h-[350px]" key={i}/>
                     )) :
-                    creations?.map((creation) => (
-                            <div className="flex flex-col aspect-auto items-center justify-between bg-neutral-200 border border-neutral-300" onClick={() => window.location.href = `/creations/${creation.url}`}>
+                    creations?.map((creation, index) => (
+                            <div key={index} className="flex flex-col aspect-auto items-center justify-between bg-neutral-200 border border-neutral-300" onClick={() => window.location.href = `/creations/${creation.url}`}>
                                 <Image
                                     src={`/ressources/${creation.image}`}
                                     alt={creation.name}

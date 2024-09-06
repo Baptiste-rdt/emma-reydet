@@ -91,8 +91,8 @@ export default function Page() {
                     <div className="flex justify-center w-full align-bottom">
                         {mainEvents.map((event, index) => (
                             event.display ? 
-                            <FormationCard formation={event} />
-                            : <div className="h-1 w-[10vw]"></div>
+                            <FormationCard formation={event} key={index}/>
+                            : <div className="h-1 w-[10vw]" key={index}></div>
                         ))}
                     </div>
 
@@ -145,8 +145,8 @@ export default function Page() {
                                 <div className="h-1 w-[20vw]"></div>
                                 {subEvents.map((event, index) => (
                                     event.display ? 
-                                    <WorkingCard working={event} />
-                                    : <div className="h-1 w-[10vw]"></div>
+                                    <WorkingCard working={event} key={index}/>
+                                    : <div className="h-1 w-[10vw]" key={index}></div>
                                 ))}
                             </div>
                         </div>
