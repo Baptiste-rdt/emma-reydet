@@ -25,11 +25,11 @@ export default function Header() {
                         <h2 className="text-2xl font-bold cursor-pointer m-0 p-0" onClick={() => window.location.href = '/'}>Emma Reydet</h2>
                     </div>
                     <div className="flex items-center">
-                        <Link href="presentation" className="underline-offset-4 hover:underline text-neutral-200">Présentation</Link>
+                        <Link href="/presentation" className="underline-offset-4 hover:underline text-neutral-200">Présentation</Link>
                         <Separator orientation="vertical" className="relative mx-5 h-[40px] bg-neutral-200" />
-                        <Link href="creations" className="underline-offset-4 hover:underline text-neutral-200">Mes Créations</Link>
+                        <Link href="/creations" className="underline-offset-4 hover:underline text-neutral-200">Mes Créations</Link>
                         <Separator orientation="vertical" className="relative mx-5 h-[40px] bg-neutral-200" />
-                        <Link href="contact" className="underline-offset-4 hover:underline text-neutral-200">Contact</Link>
+                        <Link href="/contact" className="underline-offset-4 hover:underline text-neutral-200">Contact</Link>
                     </div>
                 </div>
             </header>
