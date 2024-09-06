@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 import { Separator } from "../ui/separator";
 import "./header.css"
 import Link from "next/link";
-import { useGlobale } from "../provider/globale-provider";
 import Image from "next/image";
 
 export default function Header() {

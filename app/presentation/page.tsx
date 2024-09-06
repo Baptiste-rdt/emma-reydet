@@ -71,9 +71,9 @@ export default function Page() {
                 <div className="flex items-center justify-center w-[80vw]">
                     <div className="text-justify w-[50%]">
                         Après une année en apprentissage au sein de la boulangerie Raphaël Jäger où
-                        j'ai effectué un CAP Pâtisserie, je souhaite approfondir mes connaissances en
+                        j&#x27;ai effectué un CAP Pâtisserie, je souhaite approfondir mes connaissances en
                         réalisant une mention complémentaire pâtisserie. Déterminée et motivée, je suis
-                        donc à larecherche d'un poste d'apprentie pâtissière pour l'année 2024-2025.
+                        donc à la recherche d&#x27;un poste d&#x27;apprentie pâtissière pour l&#x27;année 2024-2025.
                     </div>
                     <div className="relative w-[50%] h-[60vh]">
                         <Image
