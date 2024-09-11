@@ -24,7 +24,7 @@ export default function CreationUrlPage({ params }: CreationUrlPageProps) {
 
     useEffect(() => {
         const fetchData = async () => {
-    
+
             console.log(params)
             const response = await fetch(`/api/findCreationByUrl?url=${params.creationUrl}`, {
                 method: "GET",
@@ -35,12 +35,12 @@ export default function CreationUrlPage({ params }: CreationUrlPageProps) {
             setCreation(data);
             setLoading(false);
         };
-    
+
         fetchData();
-      }, []);
+    }, []);
 
     if (loading) {
-        return <Loader/>;
+        return <Loader />;
     }
 
     return (
@@ -58,9 +58,9 @@ export default function CreationUrlPage({ params }: CreationUrlPageProps) {
                 <PageSeparator />
                 <div className="text-2xl text-neutral-950">{creation.name}</div>
                 <PageSeparator />
-                <div className="flex items-center justify-center w-[80vw]">
-                    <div className="text-justify w-[50%]">{creation.description}</div>
-                    <div className="relative w-[50%] h-[60vh]">
+                <div className="flex flex-col md:flex-row items-center justify-center w-[80vw]">
+                    <div className="text-justify md:w-[50%]">{creation.description}</div>
+                    <div className="relative w-full md:w-[50%] h-[60vh]">
                         <Image
                             src={`/ressources/${creation.image}`}
                             alt={`Photo de ${creation.name}`}

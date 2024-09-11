@@ -16,7 +16,7 @@ import {
     MenubarShortcut,
     MenubarTrigger,
 } from "@/components/ui/menubar";
-import {Menu} from "lucide-react";
+import { Menu } from "lucide-react";
 
 
 export default function Header() {
@@ -62,13 +62,13 @@ export default function Header() {
                         <div>
                             <Menubar className="bg-transparent border-none rounded-none">
                                 <MenubarMenu>
-                                    <MenubarTrigger className="bg-opacity-25 rounded-none"><Menu className="w-8 h-8"/></MenubarTrigger>
+                                    <MenubarTrigger className="bg-opacity-25 rounded-none"><Menu className="w-8 h-8" /></MenubarTrigger>
                                     <MenubarContent className="bg-neutral-950 bg-opacity-90 text-neutral-200 border-none rounded-none">
-                                        <MenubarItem onClick={() => window.location.href = "/presentation" } className="rounded-none">Présentation</MenubarItem>
-                                        <MenubarSeparator className="bg-neutral-600"/>
-                                        <MenubarItem onClick={() => window.location.href = "/creations" } className="rounded-none">Mes Créations</MenubarItem>
-                                        <MenubarSeparator className="bg-neutral-600"/>
-                                        <MenubarItem onClick={() => window.location.href = "/contact" } className="rounded-none">Contact</MenubarItem>
+                                        <MenubarItem onClick={() => window.location.href = "/presentation"} className="rounded-none">Présentation</MenubarItem>
+                                        <MenubarSeparator className="bg-neutral-600" />
+                                        <MenubarItem onClick={() => window.location.href = "/creations"} className="rounded-none">Mes Créations</MenubarItem>
+                                        <MenubarSeparator className="bg-neutral-600" />
+                                        <MenubarItem onClick={() => window.location.href = "/contact"} className="rounded-none">Contact</MenubarItem>
                                     </MenubarContent>
                                 </MenubarMenu>
                             </Menubar>

@@ -46,7 +46,7 @@ export default function Page() {
             <PageSeparator />
             <div className="text-2xl text-neutral-950">Mes Créations</div>
             <PageSeparator />
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 p-4 max-w-[80vw]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 p-4 max-w-[80vw]">
                 {loading ?
                     Array(4).fill("empty").map((_, i) => (
                             <Skeleton className="w-[250px] h-[350px]" key={i}/>
