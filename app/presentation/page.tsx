@@ -42,7 +42,7 @@ export default function Page() {
     const FormationCard = ({ formation }: any) => {
         return (
 
-            <div className="w-[10vw] flex flex-row 2xl:flex-col justify-end min-h-[250px] gap-4 items-center">
+            <div className="2xl:w-[10vw] flex flex-row 2xl:flex-col justify-end min-h-[250px] gap-4 items-center">
                 <div className="flex flex-col justify-end items-center">
                     <div className=" text-lg text-center font-semibold">{formation.titre}</div>
                     <Separator className="w-8 h-[2px] bg-neutral-950 my-1" />
@@ -50,7 +50,7 @@ export default function Page() {
                     <Separator className="w-8 h-[1px] bg-neutral-500 my-1" />
                     <div className="text-sm text-center">{formation.ville}</div>
                 </div>
-                <div className="aspect-square rounded-full bg-rose-400 text-neutral-100 text-center flex items-center justify-center w-12 h-12 mt-2">
+                <div className="aspect-square rounded-full bg-rose-400 text-neutral-100 text-center flex items-center justify-center w-12 h-12 2xl:mt-2">
                     {formation.date}
                 </div>
             </div>
@@ -61,8 +61,8 @@ export default function Page() {
     const WorkingCard = ({ working }: any) => {
         return (
 
-            <div className="w-[10vw] flex flex-row 2xl:flex-col justify-start min-h-[250px] items-center gap-4">
-                <div className="aspect-square rounded-full bg-rose-400 text-neutral-100 text-center flex items-center justify-center h-20 mb-2">
+            <div className="2xl:w-[10vw] flex flex-row 2xl:flex-col justify-start min-h-[250px] items-center gap-4">
+                <div className="aspect-square rounded-full bg-rose-400 text-neutral-100 text-center flex items-center justify-center h-20 2xl:mb-2">
                     {working.date}
                 </div>
                 <div className="flex flex-col justify-start items-center">
@@ -113,7 +113,7 @@ export default function Page() {
                         {/* Frise Horizontale */}
 
                         {/* Formations */}
-                        <div className="flex justify-center w-full align-bottom">
+                        <div className="flex justify-center w-full align-bottom pb-5">
                             {mainEvents.map((event, index) => (
                                 event.display ?
                                     <FormationCard formation={event} key={index} />
@@ -121,17 +121,11 @@ export default function Page() {
                             ))}
                         </div>
                         {/* Ligne Formations */}
-                        <div className="flex justify-center w-full items-center">
-                            {mainEvents.map((event, index) => (
-                                <div key={index} className="flex items-center w-[10vw]">
-                                    {index < mainEvents.length && (
-                                        <div className={`border-b-2 border-neutral-950 w-full`}></div>
-                                    )}
-                                </div>
-                            ))}
+                        <div className="flex flex-row justify-center w-[60vw] h-auto items-center">
+                            <div className="border-b-2 border-neutral-950 h-auto w-full"></div>
                         </div>
                         {/* Liens entre les lignes */}
-                        <div className="flex">
+                        <div className="flex flex-row">
                             <div className="w-[10vw] h-1" />
                             <div className="flex justify-end h-[45.2px] w-[10vw]">
                                 <div className="h-[2px] w-16 bg-neutral-950 transform rotate-45 origin-top-right mt-[44px]"></div>
@@ -155,10 +149,8 @@ export default function Page() {
                             </div>
                         </div>
                         {/* Expériences Pros */}
-                        <div className="flex flex-col justify-center w-full mt-4">
-                            <div className="flex-1"></div>
-                            <div className="flex flex-col items-center">
-                                <div className="flex justify-center w">
+                        <div className="flex flex-col justify-center w-full pt-5">
+                                <div className="flex justify-center">
                                     <div className="h-1 w-[20vw]"></div>
                                     {subEvents.map((event, index) => (
                                         event.display ?
@@ -166,68 +158,52 @@ export default function Page() {
                                             : <div className="h-1 w-[10vw]" key={index}></div>
                                     ))}
                                 </div>
-                            </div>
                         </div>
                     </div>
                     :
-                    <div className="flex flex-col items-center w-[80vw] justify-center">
+                    <div className="flex items-center w-[80vw] justify-center my-5">
                         {/* Frise Verticale */}
 
                         {/* Formations */}
-                        <div className="flex flex-col 2xl:flex-row justify-center w-full align-bottom">
+                        <div className="flex flex-col justify-end w-full pr-5">
                             {mainEvents.map((event, index) => (
                                 event.display ?
                                     <FormationCard formation={event} key={index} />
-                                    : <div className="h-1 w-[10vw]" key={index}></div>
+                                    : <div className="h-[250px] w-1" key={index}></div>
                             ))}
                         </div>
                         {/* Ligne Formations */}
-                        <div className="flex justify-center w-full items-center">
-                            {mainEvents.map((event, index) => (
-                                <div key={index} className="flex items-center w-[10vw]">
-                                    {index < mainEvents.length && (
-                                        <div className={`border-b-2 border-neutral-950 w-full`}></div>
-                                    )}
-                                </div>
-                            ))}
+                        <div className="flex flex-row justify-center h-full w-[2px] items-center">
+                            <div className="bg-neutral-950 w-[2px] h-[1500px]"></div>
                         </div>
                         {/* Liens entre les lignes */}
-                        <div className="flex">
-                            <div className="w-[10vw] h-1" />
-                            <div className="flex justify-end h-[45.2px] w-[10vw]">
-                                <div className="h-[2px] w-16 bg-neutral-950 transform rotate-45 origin-top-right mt-[44px]"></div>
+                        <div className="flex flex-row">
+                            <div className="w-1 h-[250px]" />
+                            <div className="flex justify-end h-[250px] w-[45.2px] items-end">
+                                <div className="h-16 w-[2px] bg-neutral-950 transform -rotate-45 origin-bottom-right mt-[44px]"></div>
                             </div>
-                            <div className="w-[40vw] h-1" />
+                            <div className="w-1 h-[1000px]" />
                         </div>
                         {/* Ligne Expérience Pro */}
-                        <div className="flex flex-col justify-center w-full">
+                        <div className="flex flex-col justify-center">
                             <div className="flex-1"></div>
                             <div className="flex flex-col items-center">
-                                <div className="flex justify-center w">
-                                    <div className="h-1 w-[20vw]"></div>
-                                    {subEvents.map((event, index) => (
-                                        <div key={index} className="flex items-center w-[10vw]">
-                                            {index < subEvents.length && (
-                                                <div className={`border-t-2 border-neutral-950 w-full `}></div>
-                                            )}
-                                        </div>
-                                    ))}
+                                <div className="flex flex-col justify-center">
+                                    <div className="h-[500px] w-1"></div>
+                                    <div className="bg-neutral-950 w-[2px] h-[1000px]"></div>
                                 </div>
                             </div>
                         </div>
                         {/* Expériences Pros */}
-                        <div className="flex flex-col justify-center w-full mt-4">
-                            <div className="flex-1"></div>
-                            <div className="flex flex-col items-center">
-                                <div className="flex flex-col 2xl:flex-row justify-center w">
-                                    <div className="h-1 w-[20vw]"></div>
+                        <div className="flex flex-col justify-start w-full pl-5">
+                                <div className="flex flex-col justify-start">
+                                    <div className="h-[500px] w-1"></div>
                                     {subEvents.map((event, index) => (
                                         event.display ?
                                             <WorkingCard working={event} key={index} />
-                                            : <div className="h-1 w-[10vw]" key={index}></div>
+                                            : <div className="h-[250px] w-1" key={index}></div>
                                     ))}
                                 </div>
-                            </div>
                         </div>
                     </div>
                 }
